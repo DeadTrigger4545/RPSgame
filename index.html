@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Papaer Scissors</title>
+  </head>
+  <body>
+    <!-- scoreboard -->
+    <div class="scoreboard">
+      <h1>
+        ROCK <br />PAPER <br />
+        SCISSORS
+      </h1>
+      <div class="comsco">
+        <h2>Computer <br />Score</h2>
+        <p id="com_score">0</p>
+      </div>
+      <div class="usersco">
+        <h2>User <br />Score</h2>
+        <p id="user_score">0</p>
+      </div>
+    </div>
+    <!-- gamescreen -->
+    <div class="gamescreen">
+      <hr class="hr" id="line1" />
+      <hr class="hr" id="line2" />
+      <hr class="hr" id="line3" />
+      <div class="rock">
+        <img
+          onclick="startGame('rock')"
+          id="rockimg"
+          src="rock.png"
+          alt="rock"
+        />
+      </div>
+      <div class="paper">
+        <img
+          onclick="startGame('paper')"
+          id="paperimg"
+          src="paper.png"
+          alt="paper"
+        />
+      </div>
+      <div class="scissor">
+        <img
+          onclick="startGame('scissor')"
+          id="scissorimg"
+          src="scissor.png"
+          alt="scissor"
+        />
+      </div>
+    </div>
+    <!-- buttons -->
+    <div class="buttons">
+      <button id="rules_btn" onclick="rules('show')" class="rules_btn">
+        RULES
+      </button>
+      <button class="next_btn" onclick="showHurray()">NEXT</button>
+    </div>
+    <!-- rules -->
+    <div id="rules_modal" class="rules_modal">
+      <button class="close" onclick="rules()">X</button>
+      <h1>GAME RULES</h1>
+      <ol>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ol>
+    </div>
+    <!-- result -->
+    <div class="result">
+      <div class="result_div">
+        <h2>You Picked</h2>
+        <div class="user_pick">
+          <img id="user_pick" src="rock.png" alt="" />
+        </div>
+      </div>
+      <div class="result_div">
+        <div class="text">
+          <h1 class="result_win_heading">YOU WON !</h1>
+          <br />
+          <h2>AGAINST PC</h2>
+          <br />
+          <button class="play_again" onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+      </div>
+      <div class="result_div">
+        <h2 id="compick">Computer Picked</h2>
+        <div class="com_pick">
+          <img id="com_pick" src="scissor.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- hurray_page -->
+    <div class="hurray">
+      <img id="stars" src="stars.png" alt="stars" />
+      <img id="trophy" src="trophy.png" alt="trophy" />
+      <h1 id="hurrayh1">HURRAY!</h1>
+      <h2 id="hurrayh2">YOU OWN THE GAME</h2>
+      <div class="text">
+        <button id="hurraybut" onclick="playAgain()">Play Again</button>
+      </div>
+    </div>
+
+    <!-- script link -->
+    <script src="index.js"></script>
+  </body>
+</html>
